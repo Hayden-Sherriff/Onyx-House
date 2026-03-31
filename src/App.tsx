@@ -19,15 +19,18 @@ const NAV_LINKS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/images/hero.jpg', alt: 'Onyx House exterior with ocean views', span: 'col-span-2 row-span-2' },
-  { src: '/images/living.jpg', alt: 'Spacious living area with floor-to-ceiling windows', span: '' },
-  { src: '/images/kitchen.jpg', alt: 'Gourmet kitchen with dual ovens', span: '' },
+  { src: '/images/hero.jpg', alt: 'Onyx House floor-to-ceiling windows with ocean views', span: 'col-span-2 row-span-2' },
+  { src: '/images/dining.jpg', alt: 'Open-plan dining area with panoramic views', span: '' },
+  { src: '/images/living.jpg', alt: 'Modern living space with dark timber accents', span: '' },
   { src: '/images/bedroom1.jpg', alt: 'Master bedroom with king bed', span: 'col-span-2' },
-  { src: '/images/bathroom.jpg', alt: 'Designer bathroom with imported bathtub', span: '' },
-  { src: '/images/outdoor.jpg', alt: 'Outdoor terrace and entertaining area', span: '' },
-  { src: '/images/view.jpg', alt: 'Breathtaking Wainui Beach views', span: 'col-span-2' },
-  { src: '/images/pool.jpg', alt: 'Luxury exterior and landscaping', span: '' },
-  { src: '/images/bedroom2.jpg', alt: 'Guest bedroom with queen bed', span: '' },
+  { src: '/images/bathroom.jpg', alt: 'Designer bathroom with marble finishes', span: '' },
+  { src: '/images/fireplace.jpg', alt: 'Outdoor wood burner fireplace', span: '' },
+  { src: '/images/view.jpg', alt: 'Breathtaking Wainui Beach sunset views', span: 'col-span-2' },
+  { src: '/images/bathtub.jpg', alt: 'Luxury imported bathtub', span: '' },
+  { src: '/images/beach.jpg', alt: 'Wainui Beach from the property', span: '' },
+  { src: '/images/kitchen.jpg', alt: 'Gourmet kitchen with dual ovens', span: '' },
+  { src: '/images/terrace.jpg', alt: 'Outdoor terrace and entertaining area', span: '' },
+  { src: '/images/aerial.jpg', alt: 'Aerial view of Onyx House and surroundings', span: 'col-span-2' },
 ]
 
 const AMENITIES = [
@@ -56,13 +59,13 @@ const BEDROOMS = [
   },
   {
     name: 'Guest Suite 2',
-    image: '/images/living.jpg',
+    image: '/images/bedroom3.jpg',
     bed: 'Queen Bed',
     features: ['Shared bathroom', 'XXL bathtub'],
   },
   {
     name: 'Bunk Room',
-    image: '/images/kitchen.jpg',
+    image: '/images/bunkroom.jpg',
     bed: '2 Queens, 2 King Singles, 1 Pullout',
     features: ['Sleeps up to 7', 'Perfect for families'],
   },
@@ -307,8 +310,8 @@ function About() {
 
           <div className="relative">
             <img
-              src="/images/view.jpg"
-              alt="Panoramic ocean views from Onyx House"
+              src="/images/exterior.jpg"
+              alt="Onyx House exterior architecture"
               className="w-full aspect-[4/5] object-cover"
             />
             <div className="absolute -bottom-6 -left-6 bg-stone-900 text-white p-6 md:p-8">
@@ -562,8 +565,8 @@ function BookingCTA() {
     <section className="relative py-32 md:py-40">
       <div className="absolute inset-0">
         <img
-          src="/images/outdoor.jpg"
-          alt="Outdoor entertaining area"
+          src="/images/sunset.jpg"
+          alt="Sunset views from Onyx House"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
