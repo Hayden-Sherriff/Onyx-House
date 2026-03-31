@@ -72,12 +72,48 @@ const BEDROOMS = [
 ]
 
 const NEARBY = [
-  { icon: <Waves className="w-8 h-8" />, name: 'Wainui Beach', distance: 'Short stroll', description: 'Powdery sands and crystal-clear waters' },
-  { icon: <Sun className="w-8 h-8" />, name: 'Okitu Pines Surf Break', distance: 'At your doorstep', description: 'Renowned surf break for adventure seekers' },
-  { icon: <TreePine className="w-8 h-8" />, name: 'Stockroute & Makarori', distance: '5 min drive', description: 'Beautiful coastal walks and beaches' },
-  { icon: <Grape className="w-8 h-8" />, name: 'Gisborne Wineries', distance: 'Short drive', description: 'World-class Chardonnay and local cuisine' },
-  { icon: <Mountain className="w-8 h-8" />, name: 'Rere Falls', distance: '30 min drive', description: 'Stunning natural waterfall and rock slide' },
-  { icon: <MapPin className="w-8 h-8" />, name: 'Gisborne City', distance: '10 min drive', description: 'Rich Maori heritage, culture, and dining' },
+  {
+    icon: <Waves className="w-8 h-8" />,
+    name: 'Wainui Beach',
+    distance: 'Short stroll',
+    description: 'A pristine stretch of East Coast paradise just steps from the property. Golden sands stretch for kilometres, with safe swimming areas patrolled by lifeguards in summer and world-famous surf breaks that attract riders from across the globe. Cycle the sealed 6km beach track into town, or simply stroll along the shore as the first rays of sunrise paint the Pacific.',
+    image: '/images/loc-wainui.jpg',
+  },
+  {
+    icon: <Sun className="w-8 h-8" />,
+    name: 'Okitu Pines Surf Break',
+    distance: 'At your doorstep',
+    description: 'One of Gisborne\'s most consistent and revered surf breaks, right at your doorstep. The Pines offers powerful beach breaks over sand-bottom that range from waist-high peelers to double-overhead barrels depending on the swell. The car park doubles as a prime spectator spot — grab a coffee from the Okitu Store and watch the action.',
+    image: '/images/loc-surf.jpg',
+  },
+  {
+    icon: <TreePine className="w-8 h-8" />,
+    name: 'Stockroute & Makarori',
+    distance: '5 min drive',
+    description: 'A stunning coastal walk over Makorori Headland connects Wainui and Makorori beaches, offering sweeping panoramic views of the Pacific Ocean, Māhia Peninsula, and Te Kurī-a-Pāoa (Young Nick\'s Head). The 30-minute return walk passes through native bush and over historic Māori land — perfect for a sunset stroll or morning birdwatching.',
+    image: '/images/loc-coastal.jpg',
+  },
+  {
+    icon: <Grape className="w-8 h-8" />,
+    name: 'Gisborne Wineries',
+    distance: 'Short drive',
+    description: 'Known as the Chardonnay Capital of New Zealand, Gisborne\'s sun-drenched vineyards produce exceptional wines. Visit cellar doors like Matawhero (crafting wines since 1975), Bushmere Estate, and Bridge Estate. Don\'t miss the annual Chardonnay Affair festival. With fertile alluvial soils and a warm maritime climate, the region also excels in Pinot Gris and Gewürztraminer.',
+    image: '/images/loc-winery.jpg',
+  },
+  {
+    icon: <Mountain className="w-8 h-8" />,
+    name: 'Rere Falls & Rockslide',
+    distance: '45 min drive',
+    description: 'A must-do day trip along the scenic Wharekopae River valley. Rere Falls is a picturesque wide-curtain waterfall with a natural swimming hole at its base — ideal for a picnic. Just around the bend, the famous Rere Rockslide is a 60-metre natural waterslide of smooth rock — grab a boogie board and ride the rushing water into the pool below. Free entry, open year-round.',
+    image: '/images/loc-falls.jpg',
+  },
+  {
+    icon: <MapPin className="w-8 h-8" />,
+    name: 'Gisborne City',
+    distance: '10 min drive',
+    description: 'The first city in the world to see the sunrise. Gisborne (Tairāwhiti) is steeped in Māori heritage — it\'s where the Horouta and Te Ikaroa-a-Rauru waka first landed. Explore the Tairāwhiti Museum, dine at the vibrant Inner Harbour, browse the Saturday farmers\' market, or climb Kaiti Hill for panoramic views. A relaxed, authentic New Zealand town with incredible food and culture.',
+    image: '/images/loc-gisborne.jpg',
+  },
 ]
 
 const FAQS = [
@@ -523,24 +559,39 @@ function Location() {
             Explore the Surroundings
           </h2>
           <p className="text-stone-500 max-w-2xl mx-auto leading-relaxed">
-            Perched above Wainui Beach, you&apos;re just a short stroll away from the powdery sands
-            and crystal-clear waters. Gisborne is a city known for its rich Maori heritage
-            and welcoming atmosphere.
+            Perched above Wainui Beach on New Zealand&apos;s stunning East Coast, Onyx House
+            is your gateway to world-class surf, award-winning wineries, coastal trails,
+            and the first sunrise in the world.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {NEARBY.map((place) => (
             <div
               key={place.name}
-              className="group p-8 bg-stone-50 hover:bg-stone-100 transition-colors duration-300"
+              className="group relative overflow-hidden bg-stone-50 transition-all duration-500 cursor-pointer"
             >
-              <div className="text-stone-400 group-hover:text-stone-600 transition-colors mb-4">
-                {place.icon}
+              {/* Hover image */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={place.image}
+                  alt={place.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="flex items-center gap-2 text-white/90">
+                    {place.icon}
+                    <span className="text-xs tracking-widest uppercase font-medium">{place.distance}</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-serif text-xl text-stone-900 mb-1">{place.name}</h3>
-              <p className="text-sm text-stone-400 mb-3 tracking-wide">{place.distance}</p>
-              <p className="text-sm text-stone-600 leading-relaxed">{place.description}</p>
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="font-serif text-xl text-stone-900 mb-3">{place.name}</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">{place.description}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -551,8 +602,9 @@ function Location() {
           </p>
           <p className="text-stone-600 max-w-2xl mx-auto leading-relaxed">
             Gisborne holds the unique distinction of being one of the first cities in the world
-            to see the sunrise each day. Immerse yourself in the vibrant local culture, wineries,
-            and cuisine of this extraordinary region.
+            to see the sunrise each day. From the sacred peak of Maunga Hikurangi to the golden
+            shores of Wainui Beach, this is a region where Māori heritage, world-class wine,
+            and raw natural beauty come together in a truly extraordinary way.
           </p>
         </div>
       </div>
