@@ -391,6 +391,12 @@
       margin: 0 auto 0.5rem;
       color: var(--color-text-inverse);
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .node-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .avatar-cba { background: #e6a800; }
     .avatar-cto { background: var(--color-cognition); }
@@ -599,6 +605,7 @@
       font-size: var(--text-lg);
       flex-shrink: 0;
       color: var(--color-text-inverse);
+      overflow: hidden;
     }
 
     .panel-exec-meta h2 {
@@ -1357,7 +1364,7 @@
         <div class="branch-col">
           <div class="node node-ceo" data-id="comyn" onclick="selectNode('comyn')">
             <div class="node-tier tier-2"></div>
-            <div class="node-avatar avatar-cba">MC</div>
+            <div class="node-avatar avatar-cba"><img src="avatars/matt-comyn.jpg" alt="MC"></div>
             <div class="node-name">Matt Comyn</div>
             <div class="node-title">Managing Director &amp; CEO</div>
             <div class="node-badge badge-warm">⭐ Strategic Sponsor</div>
@@ -1380,7 +1387,7 @@
           <div style="width:2px;height:1.25rem;background:var(--color-border);"></div>
           <div class="node node-cto" data-id="castillo" onclick="selectNode('castillo')">
             <div class="node-tier tier-1"></div>
-            <div class="node-avatar avatar-cto">RC</div>
+            <div class="node-avatar avatar-cto"><img src="avatars/rodrigo-castillo.jpg" alt="RC"></div>
             <div class="node-name">Rodrigo Castillo</div>
             <div class="node-title">Group Chief Technology Officer</div>
             <div class="node-badge badge-hot">🔥 Primary Target</div>
@@ -1394,7 +1401,7 @@
           <div style="width:2px;height:1.25rem;background:var(--color-border);"></div>
           <div class="node node-caio" data-id="boteju" onclick="selectNode('boteju')">
             <div class="node-tier tier-1"></div>
-            <div class="node-avatar avatar-caio">RB</div>
+            <div class="node-avatar avatar-caio"><img src="avatars/ranil-boteju.jpg" alt="RB"></div>
             <div class="node-name">Ranil Boteju</div>
             <div class="node-title">Chief AI Officer</div>
             <div class="node-badge badge-new">✦ New · Since 2026</div>
@@ -1408,7 +1415,7 @@
           <div style="width:2px;height:1.25rem;background:var(--color-border);"></div>
           <div class="node" data-id="ledda" onclick="selectNode('ledda')">
             <div class="node-tier tier-1"></div>
-            <div class="node-avatar avatar-cio">VL</div>
+            <div class="node-avatar avatar-cio"><img src="avatars/victoria-ledda.jpg" alt="VL"></div>
             <div class="node-name">Victoria Ledda</div>
             <div class="node-title">CIO, Retail Banking</div>
             <div class="node-badge badge-hot">🔥 Primary Target</div>
@@ -1422,7 +1429,7 @@
           <div style="width:2px;height:1.25rem;background:var(--color-border);"></div>
           <div class="node" data-id="bunnell" onclick="selectNode('bunnell')">
             <div class="node-tier tier-2"></div>
-            <div class="node-avatar avatar-ops">EB</div>
+            <div class="node-avatar avatar-ops"><img src="avatars/emma-bunnell.jpg" alt="EB"></div>
             <div class="node-name">Emma Bunnell</div>
             <div class="node-title">Chief Operations Officer</div>
             <div class="node-badge badge-warm">⚡ Productivity Angle</div>
@@ -1436,7 +1443,7 @@
           <div style="width:2px;height:1.25rem;background:var(--color-border);"></div>
           <div class="node" data-id="robinson" onclick="selectNode('robinson')">
             <div class="node-tier tier-2"></div>
-            <div class="node-avatar avatar-people">KR</div>
+            <div class="node-avatar avatar-people"><img src="avatars/kiersten-robinson.jpg" alt="KR"></div>
             <div class="node-name">Kiersten Robinson</div>
             <div class="node-title">Chief People Officer</div>
             <div class="node-badge badge-warm">⚡ People + AI Angle</div>
@@ -1459,7 +1466,7 @@
           <div style="width:2px;height:1.25rem;background:var(--color-border);"></div>
           <div class="node" data-id="nesbitt" onclick="selectNode('nesbitt')">
             <div class="node-tier tier-1"></div>
-            <div class="node-avatar avatar-gm">RN</div>
+            <div class="node-avatar avatar-gm"><img src="avatars/richard-nesbitt.jpg" alt="RN"></div>
             <div class="node-name">Richard Nesbitt</div>
             <div class="node-title">EGM, AI &amp; Data Science</div>
             <div class="node-badge badge-hot">🔥 AI Champion</div>
@@ -1473,7 +1480,7 @@
           <div style="width:2px;height:1.25rem;background:var(--color-border);"></div>
           <div class="node" data-id="moollan" onclick="selectNode('moollan')">
             <div class="node-tier tier-2"></div>
-            <div class="node-avatar avatar-cloud">AM</div>
+            <div class="node-avatar avatar-cloud"><img src="avatars/ash-moollan.jpg" alt="AM"></div>
             <div class="node-name">Ash Moollan</div>
             <div class="node-title">GM, Cloud Acceleration &amp; Acting CTO India</div>
             <div class="node-badge badge-warm">☁ Agentic AI</div>
@@ -1505,7 +1512,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="harvey" onclick="selectNode('harvey')" style="max-width:none;">
               <div class="node-tier tier-2"></div>
-              <div class="node-avatar" style="width:38px;height:38px;font-size:var(--text-sm);background:#d97706;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">PH</div>
+              <div class="node-avatar" style="width:38px;height:38px;font-size:var(--text-sm);background:#d97706;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/peter-harvey.jpg" alt="PH"></div>
               <div class="node-name">Peter Harvey</div>
               <div class="node-title">CIO, Bankwest</div>
               <div class="node-badge badge-warm">⚡ Secondary</div>
@@ -1580,7 +1587,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="hchan" onclick="selectNode('hchan')" style="max-width:none;">
               <div class="node-tier" style="background:#f59e0b;"></div>
-              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">HC</div>
+              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/henry-chan.jpg" alt="HC"></div>
               <div class="node-name">Henry Chan</div>
               <div class="node-title">Product Owner, AI Powered Engineering</div>
               <div class="node-badge badge-hot">🔥 Direct Pilot Contact</div>
@@ -1593,7 +1600,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="bshields" onclick="selectNode('bshields')" style="max-width:none;">
               <div class="node-tier" style="background:#f59e0b;"></div>
-              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">BS</div>
+              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/brendan-shields.jpg" alt="BS"></div>
               <div class="node-name">Brendan Shields</div>
               <div class="node-title">Senior Engineering Manager, AI Leadership</div>
               <div class="node-badge badge-hub">🌉 SF Cohort — First Wave</div>
@@ -1606,7 +1613,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="streatfeild" onclick="selectNode('streatfeild')" style="max-width:none;">
               <div class="node-tier" style="background:#f59e0b;"></div>
-              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">SS</div>
+              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/sabina-streatfeild.jpg" alt="SS"></div>
               <div class="node-name">Sabina Streatfeild</div>
               <div class="node-title">AI Engineering — Hub Programme</div>
               <div class="node-badge badge-hub">🌉 Inner Circle</div>
@@ -1619,7 +1626,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="caires" onclick="selectNode('caires')" style="max-width:none;">
               <div class="node-tier" style="background:#f59e0b;"></div>
-              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">AC</div>
+              <div class="node-avatar avatar-hub" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/andre-caires.jpg" alt="AC"></div>
               <div class="node-name">André Caires</div>
               <div class="node-title">AI Engineering — Hub Programme</div>
               <div class="node-badge badge-hub">🌉 SF Cohort</div>
@@ -1642,7 +1649,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="siyer" onclick="selectNode('siyer')" style="max-width:none;">
               <div class="node-tier" style="background:#10b981;"></div>
-              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">SI</div>
+              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/shubha-iyer.jpg" alt="SI"></div>
               <div class="node-name">Shubha Iyer</div>
               <div class="node-title">MD &amp; CEO, CommBank India</div>
               <div class="node-badge badge-hot">🔥 New — Window Open Now</div>
@@ -1655,7 +1662,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="moollan" onclick="selectNode('moollan')" style="max-width:none;">
               <div class="node-tier" style="background:#10b981;"></div>
-              <div class="node-avatar avatar-cloud" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">AM</div>
+              <div class="node-avatar avatar-cloud" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/ash-moollan.jpg" alt="AM"></div>
               <div class="node-name">Ash Moollan</div>
               <div class="node-title">Acting CTO, CBA India</div>
               <div class="node-badge badge-india">🇮🇳 Dual Role — Also in Tech Tree</div>
@@ -1668,7 +1675,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="arebala" onclick="selectNode('arebala')" style="max-width:none;">
               <div class="node-tier" style="background:#10b981;"></div>
-              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">AR</div>
+              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/aruna-rebala.jpg" alt="AR"></div>
               <div class="node-name">Aruna Rebala</div>
               <div class="node-title">GM Business Banking Technologies, India</div>
               <div class="node-badge badge-india">🇮🇳 Bengaluru HQ</div>
@@ -1681,7 +1688,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="bparker" onclick="selectNode('bparker')" style="max-width:none;">
               <div class="node-tier" style="background:#10b981;"></div>
-              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">BP</div>
+              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/barry-parker.jpg" alt="BP"></div>
               <div class="node-name">Barry Parker</div>
               <div class="node-title">Senior Engineering Leader — Payments</div>
               <div class="node-badge badge-india">🇮🇳 Bengaluru</div>
@@ -1694,7 +1701,7 @@
           <div class="branch-col" style="flex:1;min-width:155px;max-width:195px;">
             <div class="node" data-id="vampirtharaj" onclick="selectNode('vampirtharaj')" style="max-width:none;">
               <div class="node-tier" style="background:#10b981;"></div>
-              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;">VA</div>
+              <div class="node-avatar avatar-india" style="border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;margin:0 auto 0.5rem;"><img src="avatars/vinoth-amirtharaj.jpg" alt="VA"></div>
               <div class="node-name">Vinoth Amirtharaj</div>
               <div class="node-title">COO, CBA India</div>
               <div class="node-badge badge-india">🇮🇳 COO since Mar 2022</div>
@@ -3089,11 +3096,38 @@ function selectNode(id) {
   document.getElementById('detailPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// Photo map for detail panel avatars
+const avatarPhotos = {
+  'MC': 'avatars/matt-comyn.jpg',
+  'RC': 'avatars/rodrigo-castillo.jpg',
+  'RB': 'avatars/ranil-boteju.jpg',
+  'VL': 'avatars/victoria-ledda.jpg',
+  'EB': 'avatars/emma-bunnell.jpg',
+  'KR': 'avatars/kiersten-robinson.jpg',
+  'RN': 'avatars/richard-nesbitt.jpg',
+  'AM': 'avatars/ash-moollan.jpg',
+  'PH': 'avatars/peter-harvey.jpg',
+  'HC': 'avatars/henry-chan.jpg',
+  'BS': 'avatars/brendan-shields.jpg',
+  'SS': 'avatars/sabina-streatfeild.jpg',
+  'AC': 'avatars/andre-caires.jpg',
+  'SI': 'avatars/shubha-iyer.jpg',
+  'AR': 'avatars/aruna-rebala.jpg',
+  'BP': 'avatars/barry-parker.jpg',
+  'VA': 'avatars/vinoth-amirtharaj.jpg',
+};
+
 function renderPanel(exec) {
   // Header
   const avatar = document.getElementById('panelAvatar');
   avatar.className = `panel-avatar ${exec.avatarClass}`;
-  avatar.textContent = exec.initials;
+  const photoSrc = avatarPhotos[exec.initials];
+  if (photoSrc) {
+    avatar.innerHTML = `<img src="${photoSrc}" alt="${exec.initials}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">`;
+  } else {
+    avatar.innerHTML = '';
+    avatar.textContent = exec.initials;
+  }
 
   document.getElementById('panelName').textContent = exec.name;
   document.getElementById('panelTitle').textContent = exec.title;
